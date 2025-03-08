@@ -7,6 +7,7 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  base: "./", 
   build: {
     chunkSizeWarningLimit: 1000, // Increase the warning limit (optional)
     rollupOptions: {
