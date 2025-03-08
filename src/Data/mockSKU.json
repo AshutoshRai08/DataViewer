@@ -1,0 +1,15 @@
+
+  [ 
+    { "id": 1, "name": "Cotton Polo Shirt", "price": 134.99, "cost": 20.79 },
+    { "id": 2, "name": "Tassel Fringe Handbag", "price": 139.49, "cost": 30.25 },
+    { "id": 3, "name": "Minimalist Leather Watch", "price": 99.99, "cost": 15.99 },
+    { "id": 4, "name": "Foldable Travel Hat", "price": 49.99, "cost": 8.16 },
+    { "id": 5, "name": "Striped Cotton Socks", "price": 14.99, "cost": 3.68 },
+    { "id": 6, "name": "Fleece-Lined Hooded Coat", "price": 79.99, "cost": 25.12 },
+    { "id": 7, "name": "Pleated Leather Belt", "price": 34.99, "cost": 5.82 },
+    { "id": 8, "name": "Yoga Leggings", "price": 29.99, "cost": 6.14 },
+    { "id": 9, "name": "Graphic Print T-Shirt", "price": 19.99, "cost": 4.32 },
+    { "id": 10, "name": "Luxury Silk Tie", "price": 44.99, "cost": 10.79 }
+]
+
+  

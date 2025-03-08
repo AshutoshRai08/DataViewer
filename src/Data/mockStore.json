@@ -1,0 +1,62 @@
+[
+    {
+       "id":1,
+       "name":"Atlanta Outfitters",
+       "city":"Atlanta",
+       "state":"GA"
+    },
+    {
+       "id":2,
+       "name":"Chicago Charm Boutique",
+       "city":"Chicago",
+       "state":"IL"
+    },
+    {
+       "id":3,
+       "name":"Houston Harvest Market",
+       "city":"Houston",
+       "state":"TX"
+    },
+    {
+       "id":4,
+       "name":"Seattle Skyline Goods",
+       "city":"Seattle",
+       "state":"WA"
+    },
+    {
+       "id":5,
+       "name":"Miami Breeze Apparel",
+       "city":"Miami",
+       "state":"FL"
+    },
+    {
+       "id":6,
+       "name":"Denver Peaks Outdoor",
+       "city":"Denver",
+       "state":"CO"
+    },
+    {
+       "id":7,
+       "name":"Boston Harbor Books",
+       "city":"Boston",
+       "state":"MA"
+    },
+    {
+       "id":8,
+       "name":"Los Angeles Luxe",
+       "city":"Los Angeles",
+       "state":"CA"
+    },
+    {
+       "id":9,
+       "name":"Phoenix Sunwear",
+       "city":"Phoenix",
+       "state":"AZ"
+    },
+    {
+       "id":10,
+       "name":"Nashville Melody Music Store",
+       "city":"Nashville",
+       "state":"TN"
+    }
+ ]
