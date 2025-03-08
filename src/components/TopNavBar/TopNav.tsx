@@ -21,7 +21,7 @@ const TopNav: React.FC = () => {
 
         {/* Centered Title */}
         <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center" }}>
-          Data Viewer
+          Data Viewer 123
         </Typography>
 
         {/* Logout Button */}
