@@ -1,26 +1,26 @@
-# 🚀 Node.js dependencies
+#Node.js dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# 🚀 Vercel build & output
+#Vercel build & output
 .vercel/
 .vercel_build_output/
 
-# 🚀 Production build files (Vite, React, Next.js)
+#Production build files (Vite, React, Next.js)
 dist/
 build/
 
-# 🚀 Logs & caches
+#Logs & caches
 *.log
 logs/
 .cache/
 .vscode/
 .DS_Store
 
-# 🚀 Environment files (DO NOT COMMIT)
+#Environment files (DO NOT COMMIT)
 .env
 .env.local
 .env.development
@@ -28,10 +28,10 @@ logs/
 .env.test
 .env.*.local
 
-# 🚀 GitHub Actions workflows cache
+#GitHub Actions workflows cache
 .github/workflows/*.log
 
-# 🚀 IDE & system files
+#IDE & system files
 .idea/
 .vscode/
 *.swp

@@ -7,6 +7,7 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  assetsInclude: ["./src/assets/logogsyn.svg"],
   base: "./", 
   build: {
     chunkSizeWarningLimit: 1000, // Increase the warning limit (optional)
@@ -14,10 +15,10 @@ export default defineConfig({
       output: {
         // manualChunks(id) {
         //   if (id.includes("node_modules")) {
-        //     if (id.includes("react")) return "react-vendor"; // React-related libraries
-        //     if (id.includes("ag-grid")) return "ag-grid-vendor"; // AG-Grid
-        //     if (id.includes("chart.js") || id.includes("recharts")) return "charts-vendor"; // Charting libraries
-        //     return "vendor"; // Other dependencies
+        //     if (id.includes("react")) return "react-vendor"; 
+        //     if (id.includes("ag-grid")) return "ag-grid-vendor"; 
+        //     if (id.includes("chart.js") || id.includes("recharts")) return "charts-vendor"; 
+        //     return "vendor";
           // }
         // },
       },

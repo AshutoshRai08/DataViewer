@@ -1,68 +1,3 @@
-// import React, { useState } from 'react';
-// import { Container, Typography, List, ListItem, ListItemText, IconButton, TextField, Button, Paper } from '@mui/material';
-// import DeleteIcon from '@mui/icons-material/Delete';
-// import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
-
-// interface Store {
-//   id: number;
-//   name: string;
-// }
-
-// const Stores: React.FC = () => {
-//   const [stores, setStores] = useState<Store[]>([
-//     { id: 1, name: 'Store 1' },
-//     { id: 2, name: 'Store 2' },
-//   ]);
-//   const [newStore, setNewStore] = useState<string>('');
-
-//   const addStore = () => {
-//     if (newStore.trim()) {
-//       const newId = stores.length ? Math.max(...stores.map(s => s.id)) + 1 : 1;
-//       setStores([...stores, { id: newId, name: newStore }]);
-//       setNewStore('');
-//     }
-//   };
-
-//   const deleteStore = (id: number) => {
-//     setStores(stores.filter(store => store.id !== id));
-//   };
-
-//   return (
-//     <Container>
-//       <Typography variant="h4" gutterBottom>
-//         Stores
-//       </Typography>
-//       <Paper sx={{ padding: 2, mb: 2 }}>
-//         <TextField
-//           label="New Store"
-//           value={newStore}
-//           onChange={(e) => setNewStore(e.target.value)}
-//           sx={{ mr: 2 }}
-//         />
-//         <Button variant="contained" onClick={addStore}>
-//           Add Store
-//         </Button>
-//       </Paper>
-//       <List>
-//         {stores.map((store) => (
-//           <ListItem
-//             key={store.id}
-//             secondaryAction={
-//               <IconButton edge="end" onClick={() => deleteStore(store.id)}>
-//                 <DeleteIcon />
-//               </IconButton>
-//             }
-//           >
-//             <DragIndicatorIcon sx={{ mr: 1, cursor: 'grab' }} />
-//             <ListItemText primary={store.name} />
-//           </ListItem>
-//         ))}
-//       </List>
-//     </Container>
-//   );
-// };
-
-// export default Stores;
 import React, { useState } from 'react';
 import {
   Box,
@@ -113,9 +48,9 @@ const Stores: React.FC = () => {
     handleCloseDialog();
   };
 
-  // -----------------------------
-  // 3) DataGrid columns
-  // -----------------------------
+  
+  
+  
   const columns: GridColDef[] = [
     {
       field: 'actions',
@@ -163,13 +98,13 @@ const Stores: React.FC = () => {
           rows={stores}
           columns={columns}
           pageSizeOptions={[5,10,15,25,50,100]}
-          // rowsp
+          
           rowSelection={true}
           disableRowSelectionOnClick
           sx={{ 
             '& .MuiDataGrid-columnHeaders': {
-              backgroundColor: 'red', // Set red background for header
-              color: '#848884', // Set black text color
+              backgroundColor: 'red', 
+              color: '#848884', 
             },
           }}
         />

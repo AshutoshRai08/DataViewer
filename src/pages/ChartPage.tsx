@@ -67,9 +67,7 @@ const ChartPage: React.FC = () => {
 
   return (
     <Container maxWidth="xl" sx={{ width: '85vw', ml:2, height:"100vh" }}>
-      {/* Store Selection */}
       <FormControl size="small" sx={{ mb: 2 }}>
-        {/* <InputLabel>Store</InputLabel> */}
         <Select
           value={selectedStore}
           onChange={handleStoreChange}
@@ -83,15 +81,15 @@ const ChartPage: React.FC = () => {
         </Select>
       </FormControl>
 
-      {/* Dark background container for the chart */}
+      
       <Paper
         sx={{
           p: 2,
-          backgroundColor: '#333', // Dark background
-          color: '#fff',           // White text
+          backgroundColor: '#333', 
+          color: '#fff',           
         }}
       >
-        {/* Chart Title */}
+        
         <Typography
           variant="h5"
           align="center"
@@ -103,17 +101,17 @@ const ChartPage: React.FC = () => {
         <Box sx={{ height: "80vh" }}>
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart data={data}>
-              {/* Dark grid lines */}
+        
               <CartesianGrid stroke="#444" />
 
-              {/* X Axis */}
+              
               <XAxis
                 dataKey="week"
                 stroke="#fff"
                 tick={{ fill: '#fff' }}
               />
 
-              {/* Left Y Axis for GM Dollars (0 - 250k example) */}
+              
               <YAxis
                 yAxisId="left"
                 stroke="#fff"
@@ -121,8 +119,6 @@ const ChartPage: React.FC = () => {
                 domain={[0, 250000]}
                 tickFormatter={(value) => `$${value / 1000}k`}
               />
-
-              {/* Right Y Axis for GM % (0 - 100% range) */}
               <YAxis
                 yAxisId="right"
                 orientation="right"
@@ -139,7 +135,7 @@ const ChartPage: React.FC = () => {
               /> */}
               <Tooltip
   content={({ active, payload, label }) => {
-    if (!active || !payload || payload.length === 0) return null; // Prevent empty tooltip
+    if (!active || !payload || payload.length === 0) return null; 
 
     return (
       <div
@@ -167,7 +163,7 @@ const ChartPage: React.FC = () => {
                 iconType="circle"
               />
 
-              {/* Bars for GM Dollars */}
+          
               <Bar
                 yAxisId="left"
                 dataKey="gmDollars"

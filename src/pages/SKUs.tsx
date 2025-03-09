@@ -1,88 +1,3 @@
-// import React, { useState } from 'react';
-// import { Container, Typography, List, ListItem, ListItemText, IconButton, TextField, Button, Paper } from '@mui/material';
-// import DeleteIcon from '@mui/icons-material/Delete';
-// import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
-
-// interface SKU {
-//   id: number;
-//   name: string;
-//   price: number;
-//   cost: number;
-// }
-
-// const SKUs: React.FC = () => {
-//   const [skus, setSkus] = useState<SKU[]>([
-//     { id: 1, name: 'SKU 1', price: 10, cost: 7 },
-//     { id: 2, name: 'SKU 2', price: 15, cost: 10 },
-//   ]);
-//   const [newSKU, setNewSKU] = useState<{ name: string; price: string; cost: string }>({
-//     name: '',
-//     price: '',
-//     cost: '',
-//   });
-
-//   const addSKU = () => {
-//     if (newSKU.name.trim() && newSKU.price && newSKU.cost) {
-//       const newId = skus.length ? Math.max(...skus.map(s => s.id)) + 1 : 1;
-//       setSkus([...skus, { id: newId, name: newSKU.name, price: parseFloat(newSKU.price), cost: parseFloat(newSKU.cost) }]);
-//       setNewSKU({ name: '', price: '', cost: '' });
-//     }
-//   };
-
-//   const deleteSKU = (id: number) => {
-//     setSkus(skus.filter(sku => sku.id !== id));
-//   };
-
-//   return (
-//     <Container>
-//       <Typography variant="h4" gutterBottom>
-//         SKUs
-//       </Typography>
-//       <Paper sx={{ padding: 2, mb: 2 }}>
-//         <TextField
-//           label="SKU Name"
-//           value={newSKU.name}
-//           onChange={(e) => setNewSKU({ ...newSKU, name: e.target.value })}
-//           sx={{ mr: 2 }}
-//         />
-//         <TextField
-//           label="Price"
-//           type="number"
-//           value={newSKU.price}
-//           onChange={(e) => setNewSKU({ ...newSKU, price: e.target.value })}
-//           sx={{ mr: 2 }}
-//         />
-//         <TextField
-//           label="Cost"
-//           type="number"
-//           value={newSKU.cost}
-//           onChange={(e) => setNewSKU({ ...newSKU, cost: e.target.value })}
-//           sx={{ mr: 2 }}
-//         />
-//         <Button variant="contained" onClick={addSKU}>
-//           Add SKU
-//         </Button>
-//       </Paper>
-//       <List>
-//         {skus.map((sku) => (
-//           <ListItem
-//             key={sku.id}
-//             secondaryAction={
-//               <IconButton edge="end" onClick={() => deleteSKU(sku.id)}>
-//                 <DeleteIcon />
-//               </IconButton>
-//             }
-//           >
-//             <DragIndicatorIcon sx={{ mr: 1, cursor: 'grab' }} />
-//             <ListItemText primary={`${sku.name} - Price: $${sku.price}, Cost: $${sku.cost}`} />
-//           </ListItem>
-//         ))}
-//       </List>
-//     </Container>
-//   );
-// };
-
-// export default SKUs;
 import React, { useState } from 'react';
 import {
   Container,
@@ -123,16 +38,14 @@ const initialSKUs: SKU[] = skuMock as SKU[]
 // ];
 
 const SKUs: React.FC = () => {
-  // -----------------------------
-  // 1) State Management
-  // -----------------------------
+
   const [skus, setSkus] = useState<SKU[]>(initialSKUs);
   const [openDialog, setOpenDialog] = useState<boolean>(false);
   const [newSKU, setNewSKU] = useState<Partial<SKU>>({ name: '', price: 0, cost: 0 });
 
-  // -----------------------------
-  // 2) Handlers
-  // -----------------------------
+  
+  
+  
   const handleOpenDialog = () => setOpenDialog(true);
   const handleCloseDialog = () => {
     setOpenDialog(false);
@@ -150,14 +63,14 @@ const SKUs: React.FC = () => {
     setSkus(skus.filter((sku) => sku.id !== id));
   };
 
-  // -----------------------------
-  // 3) DataGrid Columns
-  // -----------------------------
+  
+  
+  
   const columns: GridColDef[] = [
     {
       field: 'actions',
       headerName: '',
-      width: 50, // Column width for delete icon
+      width: 50, 
       sortable: false,
       renderCell: (params: GridRenderCellParams<SKU>) => (
         <DeleteIcon
@@ -188,9 +101,9 @@ const SKUs: React.FC = () => {
     },
   ];
 
-  // -----------------------------
-  // 4) Render
-  // -----------------------------
+  
+  
+  
   return (
     <Container maxWidth="xl" sx={{ width: '87vw' }}>
 
@@ -200,11 +113,11 @@ const SKUs: React.FC = () => {
           columns={columns}
           pageSizeOptions={[7,14,21,50,100]}
           rowSelection={false}
-          // disableRowSelectionOnClick
+          
           sx={{ 
             '& .MuiDataGrid-columnHeaders': {
-              backgroundColor: 'red', // Set red background for header
-              color: '#848884', // Set black text color
+              backgroundColor: 'red', 
+              color: '#848884', 
             },
           }}
         />

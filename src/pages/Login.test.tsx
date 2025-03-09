@@ -5,7 +5,6 @@ import { MemoryRouter } from 'react-router-dom';
 import { AuthProvider, useAuth } from '../contexts/AuthContext';
 import Login from './Login';
 
-// Mock the useAuth hook
 jest.mock('../contexts/AuthContext', () => ({
   ...jest.requireActual('../contexts/AuthContext'),
   useAuth: jest.fn(),

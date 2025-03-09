@@ -10,13 +10,8 @@ type MainLayoutProps = {
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <>
-      {/* Sidebar */}
       <SideNav />
-
-      {/* Top Navbar */}
       <TopNav />
-
-      {/* Page Content */}
       <Box
         sx={{
           marginLeft: 20, 

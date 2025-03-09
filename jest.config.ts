@@ -1,4 +1,4 @@
-export {}; // Ensures Jest treats this as a module
+export {};
 
 export default {
   preset: 'ts-jest',
@@ -8,8 +8,8 @@ export default {
   },
   // setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   testMatch: [
-    "**/__tests__/**/*.[jt]s?(x)", // Tests inside __tests__
-    "**/?(*.)+(spec|test).[tj]s?(x)" // Matches *.test.tsx or *.spec.tsx
+    "**/__tests__/**/*.[jt]s?(x)", 
+    "**/?(*.)+(spec|test).[tj]s?(x)"
   ],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   moduleNameMapper: {

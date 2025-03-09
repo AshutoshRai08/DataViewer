@@ -1,8 +1,9 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import { useAuth } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
-// import { ReactComponent as Logo } from "../../assets/logogsyn"; // Uncomment this line
+// import { ReactComponent as Logo}  from "../../../src/assets/logogsyn.svg"; // Uncomment this line
+import  Logo  from "../../../src/assets/logogsyn.svg"; // Uncomment this line
 
 const TopNav: React.FC = () => {
   const { user, logout } = useAuth();
@@ -17,8 +18,13 @@ const TopNav: React.FC = () => {
     <AppBar sx={{ width: '100%', backgroundColor: "#fff", boxShadow: "none", color: "#000" }}>
       <Toolbar sx={{ width: '100%', padding: 0, display: "flex", justifyContent: "space-between" }}>
         {/* Logo */}
-        {/* <Logo width={50} height={50} /> Uncomment this line */}
-
+        {/* <Logo width={50} height={50} />  */}
+        
+        {/* <img src={Logo} alt="" />
+         */}
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <img src={Logo} alt="Logo" style={{ width: 80, height: 80 }} />
+        </Box>
         {/* Centered Title */}
         <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center" }}>
           Data Viewer
