@@ -11,6 +11,7 @@ const TopNav: React.FC = () => {
 
   const handleLogout = () => {
     logout();
+    sessionStorage.removeItem("Credentials");
     navigate('/login');
   };
 

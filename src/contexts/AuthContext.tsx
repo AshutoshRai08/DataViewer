@@ -13,14 +13,20 @@ const AuthContext = createContext<AuthContextType>({
 });
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<{ username: string } | null>(null);
+  const [user, setUser] = useState<{ username: string } | null>(sessionStorage.getItem("Credentials")?{username:"demo"}:null);
 
   // Dummy login: valid credentials are demo/demo
   const login = (username: string, password: string): boolean => {
+    if(!sessionStorage.getItem("Credentials")){
     if (username === 'demo' && password === 'demo') {
       setUser({ username });
+      sessionStorage.setItem("Credentials",JSON.stringify({
+        "user":username,
+        "password":password
+      }))
       return true;
-    }
+    }}
+    
     return false;
   };
 

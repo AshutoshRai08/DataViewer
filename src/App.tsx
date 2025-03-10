@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate, BrowserRouter as Router } from 'react-router-dom';
 import TopNav from './components/TopNavBar/TopNav';
-import SideNav from './components/SideNav';
+import SideNav from './components/SideNav/SideNav';
 // import Stores from './pages/Stores';
 // import SKUs from './pages/SKUs';
 // import Planning from './pages/Planning';

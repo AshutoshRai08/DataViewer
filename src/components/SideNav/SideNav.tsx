@@ -1,5 +1,5 @@
 import React from 'react';
-import { Drawer, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Button, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import StoreIcon from '@mui/icons-material/Store';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import GridOnIcon from '@mui/icons-material/GridOn';
@@ -38,10 +38,9 @@ const SideNav: React.FC = () => {
       >
         <List>
           {menuItems.map((item) => (
-            <ListItem button key={item.text} onClick={() => navigate(item.path)}>
+            <ListItemButton key={item.text} onClick={() => navigate(item.path)}>
               <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.text} />
-            </ListItem>
+              <ListItemText  > {item.text}  </ListItemText>           </ListItemButton>
           ))}
         </List>
       </Drawer>

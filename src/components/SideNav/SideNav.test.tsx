@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
-import SideNav from './SideNav';
+import SideNav from './SideNav'
 
 test('renders the side navigation with menu items', () => {
   render(

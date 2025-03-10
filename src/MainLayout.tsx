@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Box } from "@mui/material";
 import TopNav from "./components/TopNavBar/TopNav";
-import SideNav from "./components/SideNav";
+import SideNav from "./components/SideNav/SideNav";
 
 type MainLayoutProps = {
   children: ReactNode;
